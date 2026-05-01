@@ -11,6 +11,22 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   if (a.getAttribute('href') === currentPage) a.classList.add('active');
 });
 
+// Cookie banner
+const cookieBanner = document.getElementById('cookie-banner');
+if (cookieBanner) {
+  if (!localStorage.getItem('cookies_accepted')) {
+    cookieBanner.classList.remove('hidden');
+  }
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookies_accepted', 'true');
+    cookieBanner.classList.add('hidden');
+  });
+  document.getElementById('cookie-reject').addEventListener('click', () => {
+    localStorage.setItem('cookies_accepted', 'false');
+    cookieBanner.classList.add('hidden');
+  });
+}
+
 // Contact form via Formspree
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {

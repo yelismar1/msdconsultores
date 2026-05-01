@@ -323,6 +323,28 @@ footer {
   margin-top: 12px;
 }
 
+/* ===== COOKIE BANNER ===== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--gray-footer);
+  color: rgba(255,255,255,0.9);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+}
+.cookie-banner p { font-size: 0.85rem; line-height: 1.6; flex: 1; min-width: 240px; }
+.cookie-banner a { color: #7eb3ff; text-decoration: underline; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-banner.hidden { display: none; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar { padding: 12px 20px; }
