@@ -217,12 +217,9 @@ ul { list-style: none; }
 
 /* ===== SERVICES LIST (HOME) ===== */
 .services-list-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  display: block;
   max-width: 1000px;
   margin: 0 auto;
-  align-items: stretch;
 }
 .services-list-box {
   background: var(--navy);
